@@ -1,5 +1,4 @@
-/* Luis Antonio V·zquez GarcÌa
- * 153675
+/* Luis Antonio V√°zquez Garc√≠a
  * Estructuras de Datos
  * Date creation 26/Agosto/2016
  */
@@ -11,8 +10,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class Interfaz extends JFrame implements ActionListener{
-
-	private static final int FRAME_WIDTH = 800;   //Anchura del Frame
+    private static final int FRAME_WIDTH = 800;   //Anchura del Frame
     private static final int FRAME_HEIGHT = 400;	//Altura del Frame    
     //Elementos que se van a agregar al frame principal
     private JTextArea textArea;
@@ -66,7 +64,7 @@ public class Interfaz extends JFrame implements ActionListener{
 	}
 	public void crearMenuAcciones(){
 		/*
-		 * Este mÈtodo crea los items que va a contener el JMenu y posteriormente van a responder
+		 * Este m√©todo crea los items que va a contener el JMenu y posteriormente van a responder
 		 * a las acciones(actionPerformed)
 		 */
 		fileMenu = 	new JMenu("ACCIONES");
@@ -101,7 +99,7 @@ public class Interfaz extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent event) {
 		/*
 		 * Este metodo es el que responde a las acciones que crean los items
-		 * del menu que se creÛ anteriormente, se crea una variable de tipo
+		 * del menu que se cre√≥ anteriormente, se crea una variable de tipo
 		 * String para que sea comparada con el nombre del item y este haga 
 		 * su trabajo correspondiente...
 		 */
@@ -124,7 +122,7 @@ public class Interfaz extends JFrame implements ActionListener{
 	    	
 	    	if(event.getActionCommand().equals("ELIMINAR UN DATO")){
 	    		try{
-	    			datoEliminar= Integer.parseInt(JOptionPane.showInputDialog(this,"Inserta la posiciÛn a eliminar","INSERTAR DATO",JOptionPane.INFORMATION_MESSAGE));
+	    			datoEliminar= Integer.parseInt(JOptionPane.showInputDialog(this,"Inserta la posici√≥n a eliminar","INSERTAR DATO",JOptionPane.INFORMATION_MESSAGE));
 	    		}catch(Exception e){
 	    			e.getMessage();
 	    		}
@@ -137,12 +135,12 @@ public class Interfaz extends JFrame implements ActionListener{
 	}
 	public void agregarDato(){
 		/*
-		 * Este mÈtodo lo tome del de alta_secuencial
+		 * Este m√©todo lo tome del de alta_secuencial
 		 * el cual arega el dato que deseemos a la posicion
 		 * libre que este despues del ultimo usado.
 		 */
 		if(cont==MAX){
-			textArea.append("Ya est· lleno el arreglo");
+			textArea.append("Ya est√° lleno el arreglo");
 		}else{
 			arreglo[cont]=datoAgregar;
 			cont++;
@@ -151,8 +149,8 @@ public class Interfaz extends JFrame implements ActionListener{
 	}
 	public void eliminarDato(){
 		/*
-		 * Este mÈtodo elimina la posicion deseada y
-		 * asigna a esa posiciÛn 0
+		 * Este m√©todo elimina la posicion deseada y
+		 * asigna a esa posici√≥n 0
 		 */
 		//arreglo[datoEliminar]=0;
 		//cont--;
@@ -176,9 +174,9 @@ public class Interfaz extends JFrame implements ActionListener{
 	}
 	public void mostrarDatos(){
 		/*
-		 * Este mÈtodo muestra todos los datos que hay en el arreglo los
+		 * Este m√©todo muestra todos los datos que hay en el arreglo los
 		 * cuales ya fueron agregados anteriormente, de lo contrario los
-		 * valores que muestra ser·n 0,0,0...
+		 * valores que muestra ser√°n 0,0,0...
 		 */
 		textArea.append("Los datos en el arreglo son: \n");
 		for(int i:arreglo){
@@ -194,8 +192,8 @@ public class Interfaz extends JFrame implements ActionListener{
 	}
 	private void abrirArchivo(){
 		/*
-		 * Este mÈtodo lee un archivo, el cual lo tome del
-		 * ejemplo que est· en blackboard...
+		 * Este m√©todo lee un archivo, el cual lo tome del
+		 * ejemplo que est√° en blackboard...
 		 */
     	int reply,i;
     	String line, archivo, doc, path;
